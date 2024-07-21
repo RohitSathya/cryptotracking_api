@@ -55,10 +55,6 @@ const Admin = () => {
     e.target.reset();
   };
 
-  const removeSymbolHandler = (symbolToRemove: string) => {
-    dispatch(removeSymbol({ symbol: symbolToRemove, fromAdmin: true }));
-    dispatch(setSymbols(symbols.filter((sym) => sym !== symbolToRemove))); // Update local state
-  };
   
 
   const toggleFetching = () => {
@@ -127,7 +123,7 @@ const Admin = () => {
                   >
                     {sym}
                   </button>
-                  
+                 
                 </div>
               ))}
             </div>
@@ -164,8 +160,6 @@ const Admin = () => {
             <StockTable data={data} />
           </div>
         </div>
-
-        
       </div>
     </div>
   );
